@@ -39,4 +39,17 @@ public class ExpenseModel {
     public void setMonth(int month) {
         this.month = month;
     }
+
+    @Override
+    public String toString()
+    {
+        return "[category = "
+                + category
+                + ",description = "
+                + description
+                + ",amount = "
+                + amount
+                + ",month = "
+                + month + "]";
+    }
 }
