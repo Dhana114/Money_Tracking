@@ -27,17 +27,33 @@ public class IncomeModel {
     }
 
     public void setMonth(int month) {
-        this.month = month;
+
+
+        if (month >0 && month <=12 ) {
+            this.month = month;
+        }
+        else{
+            System.out.println("Enter a valid month");
+        }
+
     }
 
     @Override
     public String toString()
     {
-        return "[title = "
+        System.out.println("title = "
+                + title
+                + ",amount = "
+                + amount
+                + ",month = "
+                + month);
+       return "[title = "
                 + title
                 + ",amount = "
                 + amount
                 + ",month = "
                 + month + "]";
+
+
     }
 }
