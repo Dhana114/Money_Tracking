@@ -4,7 +4,7 @@ public class IncomeModel {
 
     private String title;
     private double amount;
-    private int month;
+    private String month;
 
     public String getTitle() {
         return title;
@@ -22,19 +22,13 @@ public class IncomeModel {
         this.amount = amount;
     }
 
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(String month) {
 
-
-        if (month >0 && month <=12 ) {
-            this.month = month;
-        }
-        else{
-            System.out.println("Enter a valid month");
-        }
+        this.month = month;
 
     }
 

@@ -6,7 +6,7 @@ public class ExpenseModel {
     private String category;
     private String description;
     private double amount;
-    private int month;
+    private String month;
 
     public String getCategory() {
         return category;
@@ -32,11 +32,11 @@ public class ExpenseModel {
         this.amount = amount;
     }
 
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(String month) {
         this.month = month;
     }
 
