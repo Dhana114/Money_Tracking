@@ -6,9 +6,6 @@ import java.util.Scanner;
 public class MoneyTrackApp {
 
 
-
-
-
     public static void main(String[] args) throws IOException {
         // Creating TransactionService
         //System.out.println(expense.values()[0]);
@@ -21,6 +18,7 @@ public class MoneyTrackApp {
         System.out.println("Enter 3 to Edit Income/Expense");
         System.out.println("Enter 4 to Remove Income/Expense");
         int inpType = myObj.nextInt();
+        myObj.nextLine();
 
         if(inpType == 1) {
 
@@ -42,11 +40,11 @@ public class MoneyTrackApp {
 
         }
 
-
-
         else{
             System.out.println("Enter a valid number");
         }
+
+
     }
 }
 
