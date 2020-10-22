@@ -59,7 +59,7 @@ public class TransactionService {
 
             String sCurrentLine;
 
-            br = new BufferedReader(new FileReader("/Users/dhanalakshmi/Downloads/income.json"));
+            br = new BufferedReader(new FileReader("income.json"));
 
             while ((sCurrentLine = br.readLine()) != null) {
 
@@ -108,18 +108,17 @@ public class TransactionService {
 
         Gson incomeGson = new Gson();
         JsonObject modelTojson = new JsonObject();
-        System.out.println("The initialized modelJson is" + modelTojson);
+
         if (incomeModel != null) {
             //Converting incomeModel to json Object
             modelTojson = (JsonObject) incomeGson.toJsonTree(incomeModel);
 
 
-            System.out.println("The model json file is:" + modelTojson);
         } else {
             modelTojson = (JsonObject) incomeGson.toJsonTree(expenseModel);
 
         }
-        FileReader jsonFile = new FileReader("/Users/dhanalakshmi/Downloads/income.json");
+        FileReader jsonFile = new FileReader("income.json");
         JsonParser parser = new JsonParser();
         JsonObject jsonFileObject = new JsonObject();
         try {
@@ -144,7 +143,7 @@ public class TransactionService {
 
 //          File Writer creates a file in write mode at the given location
 
-            FileWriter file = new FileWriter("/Users/dhanalakshmi/Downloads/income.json");
+            FileWriter file = new FileWriter("income.json");
 
 //          Here we convert the obj data to string and put/write it inside the json file
 
@@ -160,7 +159,7 @@ public class TransactionService {
     public void editJsonEntry(int id, String choice, String key, String value) throws IOException {
 
         // Reading json file
-        FileReader jsonFile = new FileReader("/Users/dhanalakshmi/Downloads/income.json");
+        FileReader jsonFile = new FileReader("income.json");
         JsonParser parser = new JsonParser();
 
 
@@ -187,7 +186,7 @@ public class TransactionService {
 
 //          File Writer creates a file in write mode at the given location
 
-            FileWriter file = new FileWriter("/Users/dhanalakshmi/Downloads/income.json");
+            FileWriter file = new FileWriter("income.json");
 
 //          Here we convert the obj data to string and put/write it inside the json file
 
@@ -291,7 +290,7 @@ public class TransactionService {
 
 
             int cat = myObj.nextInt();  // Reading category input
-myObj.nextLine();
+            myObj.nextLine();
 
             String catego = String.valueOf(categories.values()[cat + 1]);
 
@@ -391,7 +390,7 @@ myObj.nextLine();
         TransactionService transactionService = new TransactionService();
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         //int inpType = myObj.nextInt();
-        FileReader jsonFile = new FileReader("/Users/dhanalakshmi/Downloads/income.json");
+        FileReader jsonFile = new FileReader("income.json");
         JsonParser parser = new JsonParser();
 
 
@@ -439,7 +438,7 @@ myObj.nextLine();
 
 //          File Writer creates a file in write mode at the given location
 
-            FileWriter file = new FileWriter("/Users/dhanalakshmi/Downloads/income.json");
+            FileWriter file = new FileWriter("income.json");
 
 //          Here we convert the obj data to string and put/write it inside the json file
 
